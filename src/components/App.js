@@ -1,10 +1,11 @@
 import React, {Component, PropTypes} from 'react';
+import Header from './common/Header';
 
 class App extends Component {
   render() {
     return (
       <div className = "container-fluid">
-        <p>Header here ...</p>
+        <Header />
         {/*{this.props.children}*/}
         {React.cloneElement(this.props.children, this.props)}
       </div>
@@ -14,4 +15,5 @@ class App extends Component {
 App.propTypes = {
   children: PropTypes.object.isRequired
 };
+
 export default App;
