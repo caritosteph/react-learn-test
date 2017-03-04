@@ -5,8 +5,8 @@ class App extends Component {
     return (
       <div className = "container-fluid">
         <p>Header here ...</p>
-        {this.props.children}
-        {/*{React.cloneElement(this.props.chigildren, this.props)}*/}
+        {/*{this.props.children}*/}
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     );
   }
