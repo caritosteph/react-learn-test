@@ -1,3 +1,3 @@
-export function createCourse(course) {
+export default function createCourse(course) {
   return { type: 'CREATE_COURSE', course};
 }
