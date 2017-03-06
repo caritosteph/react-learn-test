@@ -1,12 +1,13 @@
 import React, { Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import createCourse from '../../actions/CourseActions';
+import CourseList from  './CourseList';
 
 class CoursesPage extends Component {
 
   constructor(props, context){
     super(props, context);
-    
+
     // this.state = {
     //   course: { title: null }
     // };
@@ -29,10 +30,12 @@ class CoursesPage extends Component {
     return <div key = {index}>{course}</div>;
   }
   render() {
+    const {courses} = this.props;
+
     return (
       <div>
         <h1>Courses</h1>
-        {this.state.course.map(this.courseRow)}
+        <CourseList courses = {courses}/>
         {/*<h2>Add Course</h2>
         <input
           type = ""
