@@ -6,23 +6,24 @@ class CoursesPage extends Component {
 
   constructor(props, context){
     super(props, context);
-    this.state = {
-      course: { title: null }
-    };
+    
+    // this.state = {
+    //   course: { title: null }
+    // };
 
-    this.onTitleChange = this.onTitleChange.bind(this);
-    this.onClickSave = this.onClickSave.bind(this);
+    // this.onTitleChange = this.onTitleChange.bind(this);
+    // this.onClickSave = this.onClickSave.bind(this);
   }
 
-  onTitleChange(e){
-    const course = this.state.course;
-    course.title = e.target.value;
-    this.setState({course});
-  }
+  // onTitleChange(e){
+  //   const course = this.state.course;
+  //   course.title = e.target.value;
+  //   this.setState({course});
+  // }
 
-  onClickSave() {
-    this.props.createCourse(this.status.course);
-  }
+  // onClickSave() {
+  //   this.props.createCourse(this.status.course);
+  // }
 
   courseRow(course, index) {
     return <div key = {index}>{course}</div>;
@@ -32,7 +33,7 @@ class CoursesPage extends Component {
       <div>
         <h1>Courses</h1>
         {this.state.course.map(this.courseRow)}
-        <h2>Add Course</h2>
+        {/*<h2>Add Course</h2>
         <input
           type = ""
           onChange = {this.onTitleChange}
@@ -40,7 +41,7 @@ class CoursesPage extends Component {
         <input
           type = "submit"
           value = "Save"
-          onClick = {this.onClickSave} />
+          onClick = {this.onClickSave} />*/}
       </div>
     );
   }
