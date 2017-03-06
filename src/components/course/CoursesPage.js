@@ -1,5 +1,5 @@
 import React, { Component, PropTypes} from 'react';
-import connect from 'react-redux';
+import { connect } from 'react-redux';
 import createCourse from '../../actions/CourseActions';
 
 class CoursesPage extends Component {
@@ -45,6 +45,7 @@ class CoursesPage extends Component {
     );
   }
 }
+
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
   createCourse: PropTypes.func.isRequired
@@ -61,4 +62,4 @@ function mapDispatchToProps(dispatch){
   };
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(CoursesPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesPage);
